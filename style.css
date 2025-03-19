@@ -33,23 +33,27 @@ body {
   /* background-color: red; */
   border-bottom: 1px solid #dadada;
   padding: 15px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
-
-.story{
-height: 90px;
-width: 90px;
-border-radius: 50%;
-/* background-color: blueviolet; */
-border: 3px solid red;
-overflow: hidden;
-white-space: nowrap;
+#stories::-webkit-scrollbar{
+     display: none;  /*scrollbar will not show on story section...in x-axis*/
+}
+.story {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  /* background-color: blueviolet; */
+  border: 3px solid red;
+  overflow: hidden;
+  display: inline-block; /*white-space: nowrap;...taki sara story ek hi line me show ho*/
 }
 
 .story img {
-    height: 100%;
-    width: 100%;
-    /* border-radius: 50%; */ /* or do...object-position: center; and in stories... overflow: hidden;*/
-    object-fit: cover;
-    object-position: center;
-    display: inline-block; /*white-space: nowrap;...taki sara story ek hi line me show ho*/
+  height: 100%;
+  width: 100%;
+  /* border-radius: 50%; */ /* or do...object-position: center; and in stories... overflow: hidden;*/
+  object-fit: cover;
+  object-position: center;
 }
