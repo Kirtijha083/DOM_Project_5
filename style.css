@@ -21,9 +21,10 @@ body {
 
 #card {
   height: 480px;
-  width: 330px;
+  width: 300px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
+  overflow: hidden;
   border: 3px solid black;
   position: relative;  /*bcz full-screen ko position absolute diye h isly isko relative diye qki ye parent hai */
 }
