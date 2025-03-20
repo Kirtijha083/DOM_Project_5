@@ -48,6 +48,7 @@ body {
   border: 3px solid red;
   overflow: hidden;
   display: inline-block; /*white-space: nowrap;...taki sara story ek hi line me show ho*/
+margin-right: 5px;
 }
 
 .story img {
