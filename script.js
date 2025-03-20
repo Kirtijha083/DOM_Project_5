@@ -37,8 +37,12 @@ stories.addEventListener("click", (dets) => { //dets = details
 
 document.querySelector("#full-screen").style.display = "block";
 document.querySelector("#full-screen").style.backgroundImage = `url(${arr[dets.target.id].story})`;
+
+setTimeout(() => {
+  document.querySelector("#full-screen").style.display = "none";
+}, 3000); //3000-3sec
   
-})
+});
 
 // arr.forEach(function (elem,idx){ //forEach loop only apply on array
 //     // console.log("hello"); //hello print 4 time bcz size of array is 4
