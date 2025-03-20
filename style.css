@@ -25,6 +25,7 @@ body {
   background-color: #fff;
   border-radius: 10px;
   border: 3px solid black;
+  position: relative;  /*bcz full-screen ko position absolute diye h isly isko relative diye qki ye parent hai */
 }
 
 #stories {
@@ -57,4 +58,13 @@ margin-right: 5px;
   /* border-radius: 50%; */ /* or do...object-position: center; and in stories... overflow: hidden;*/
   object-fit: cover;
   object-position: center;
+}
+
+#full-screen{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  display: none;
 }

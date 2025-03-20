@@ -23,8 +23,21 @@ clutter += `<div class="story">
 // console.log(clutter);
 stories.innerHTML =clutter
 
-stories.addEventListener("click", () => {
-    console.log("hello")
+stories.addEventListener("click", (dets) => { //dets = details
+   // console.log(dets.target); //will get same img from this
+
+   // console.log(dets.target.id); //will get id of img jisme v click kre...like array
+
+    //if we wrap all this in an array[dets.target.id] like this.......then we can use this like an array...when click on any img we get everythings of this img 
+    // console.log(arr[dets.target.id]); //print whole object
+
+  //  console.log(arr[dets.target.id].story); //print only story
+
+//   arr[dets.target.id].story..this is main..we want to display
+
+document.querySelector("#full-screen").style.display = "block";
+document.querySelector("#full-screen").style.backgroundImage = `url(${arr[dets.target.id].story})`;
+  
 })
 
 // arr.forEach(function (elem,idx){ //forEach loop only apply on array
