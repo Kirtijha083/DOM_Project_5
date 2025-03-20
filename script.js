@@ -11,15 +11,21 @@ let arr = [  //adding objects in array..including story and dp......and this way
 {dp:"https://images.unsplash.com/photo-1731328667980-9ea08c5edc07?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDN8fHxlbnwwfHx8fHw%3D", story: "https://images.unsplash.com/photo-1724963843259-3b0727c53b0c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMDl8fHxlbnwwfHx8fHw%3D"},
 ];
 
+let stories = document.querySelector("#stories");
+
 let clutter = "";
 
 arr.forEach(function (elem,idx){ //back tick is called template literals
 clutter += `<div class="story">
-                <img src="${elem.dp}" alt="img">
+                <img id="${idx}" src="${elem.dp}" alt="img">
             </div>` 
 });
 // console.log(clutter);
-document.querySelector("#stories").innerHTML =clutter
+stories.innerHTML =clutter
+
+stories.addEventListener("click", () => {
+    console.log("hello")
+})
 
 // arr.forEach(function (elem,idx){ //forEach loop only apply on array
 //     // console.log("hello"); //hello print 4 time bcz size of array is 4
